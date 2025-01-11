@@ -162,9 +162,9 @@ body {
             text-decoration: none;
             border-radius: 30px;
             color: white;
-            background-color: $leftBgColor;
+            background-color: $linkHoverColor;
 
-            &:hover { background-color: $linkHoverColor; }
+            &:hover { background-color: $leftBgColor; }
         }
     }
 }
