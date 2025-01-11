@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(241, 100%, 89%);
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 1em;
+}
+@media screen and (max-width: 500px) {
+  body {
+    background-color: hsl(221, 100%, 96%);
+  }
+}
+
+.component {
+  max-width: 650px;
+  min-height: 375px;
+  margin: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: hsl(221, 100%, 96%);
+  border-radius: 30px;
+}
+@media screen and (max-width: 500px) {
+  .component {
+    margin-top: 0;
+    margin-bottom: 0;
+    flex-direction: column;
+    background-color: hsl(221, 100%, 96%);
+  }
+}
+.component section {
+  width: 50%;
+  min-height: 375px;
+  padding: 30px;
+}
+@media screen and (max-width: 500px) {
+  .component section {
+    width: 100%;
+  }
+}
+.component__left-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background-color: hsl(241, 81%, 54%);
+  color: hsl(241, 100%, 89%);
+  border-radius: 30px;
+}
+@media screen and (max-width: 500px) {
+  .component__left-side {
+    border-radius: 0 0 30px 30px;
+  }
+}
+.component__left-side__circle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 50px;
+  border-radius: 50%;
+  background: rgb(78, 33, 202);
+  background: linear-gradient(180deg, rgb(78, 33, 202) 50%, rgb(46, 43, 233) 100%);
+}
+.component__left-side__circle strong {
+  font-size: 3em;
+  color: white;
+}
+.component__left-side__mention {
+  font-size: 2em;
+  color: white;
+}
+.component__left-side__content {
+  text-align: center;
+}
+.component__right-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: hsl(221, 100%, 96%);
+  border-radius: 0 30px 30px 0;
+}
+@media screen and (max-width: 500px) {
+  .component__right-side {
+    border-radius: 0;
+  }
+}
+.component__right-side__title {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  align-self: flex-start;
+}
+.component__right-side .container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10px;
+  border-radius: 10px;
+}
+.component__right-side .container__title {
+  font-size: 1em;
+}
+.component__right-side .container div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.component__right-side .container .total {
+  opacity: 0.5;
+}
+.component__right-side__element--red {
+  background-color: hsla(0, 100%, 67%, 0.1);
+}
+.component__right-side__element--red__title {
+  color: hsl(0, 100%, 67%);
+}
+.component__right-side__element--yellow {
+  background-color: hsla(39, 100%, 56%, 0.1);
+}
+.component__right-side__element--yellow__title {
+  color: hsl(39, 100%, 56%);
+}
+.component__right-side__element--green {
+  background-color: hsla(166, 100%, 37%, 0.1);
+}
+.component__right-side__element--green__title {
+  color: hsl(166, 100%, 37%);
+}
+.component__right-side__element--blue {
+  background-color: hsla(234, 85%, 45%, 0.1);
+}
+.component__right-side__element--blue__title {
+  color: hsl(234, 85%, 45%);
+}
+.component__right-side__link {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 30px;
+  color: white;
+  background-color: hsl(241, 81%, 54%);
+}
+.component__right-side__link:hover {
+  background-color: hsl(224, 30%, 27%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*# sourceMappingURL=style.css.map */

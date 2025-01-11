@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
+* { margin: 0; }
+
+// Variables
+$bodyBgColor:hsl(241, 100%, 89%);
+$textColor: hsl(241, 100%, 89%);
+$leftBgColor: hsl(241, 81%, 54%);
+$rightBgColor: hsl(221, 100%, 96%);
+$circleBgColor:  hsla(256, 72%, 46%, 1);
+$linkHoverColor: hsl(224, 30%, 27%);
+$reactionBgColor: hsla(0, 100%, 67%, 0.1);
+$memoryBgColor: hsla(39, 100%, 56%, 0.1);
+$verbalBgColor: hsla(166, 100%, 37%, 0.1);
+$visualBgColor: hsla(234, 85%, 45%, 0.1);
+$reactionColor: hsl(0, 100%, 67%);
+$memoryColor: hsl(39, 100%, 56%);
+$verbalColor: hsl(166, 100%, 37%);
+$visualColor: hsl(234, 85%, 45%);
+
+// Mixins
+@mixin flexbox($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+body {
+    min-height: 100vh;
+    @include flexbox(column, center, center);
+    background-color: $bodyBgColor;
+
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 1em;
+
+    @media screen and (max-width: 500px) {
+        background-color: $rightBgColor;
+    }
+}
+
+.component {
+    max-width: 650px;
+    min-height: 375px;
+    margin: 30px;
+    @include flexbox(row, flex-start, center);
+    background-color: $rightBgColor;
+    border-radius: 30px;
+
+    @media screen and (max-width: 500px) {
+        margin-top: 0;
+        margin-bottom: 0;
+        flex-direction: column;
+        background-color: $rightBgColor;
+    }
+
+    section {
+        width: 50%;
+        min-height: 375px;
+        padding: 30px;
+
+        @media screen and (max-width: 500px) {
+            width: 100%;
+        }
+    }
+
+    &__left-side {
+        @include flexbox(column, center, center);
+        gap: 30px;
+        background-color: $leftBgColor;
+        color: $textColor;
+        border-radius: 30px;
+
+        @media screen and (max-width: 500px) {
+            border-radius: 0 0 30px 30px;
+        }
+
+        &__circle {
+            @include flexbox(column, center, center);
+            padding: 30px 50px;
+            border-radius: 50%;
+            background: rgb(78,33,202);
+            background: linear-gradient(180deg, rgba(78,33,202,1) 50%, rgba(46,43,233,1) 100%);
+            strong {
+                font-size: 3em;
+                color: white;
+            }
+
+        }
+        &__mention {
+            font-size: 2em;
+            color: white;
+        }
+        &__content {
+            text-align: center;
+        }
+    }
+    &__right-side {
+        @include flexbox(column, center, center);
+        gap: 10px;
+        background-color: $rightBgColor;
+        border-radius: 0 30px 30px 0;
+
+        @media screen and (max-width: 500px) {
+            border-radius: 0;
+        }
+
+        &__title {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            align-self: flex-start;
+        }
+
+        .container {
+            width: 100%;
+            @include flexbox(row, space-between, center);
+            padding: 15px 10px;
+            border-radius: 10px;
+
+            &__title {
+                font-size: 1em;
+            }
+            div {
+                @include flexbox(row, center, center);
+                gap: 10px;
+            }
+            .total {
+                opacity: .5
+            }
+        }
+
+        &__element--red {
+            &__title {
+                color: $reactionColor;
+            }
+            background-color: $reactionBgColor;
+        }
+        &__element--yellow {
+            &__title {
+                color: $memoryColor;
+            }
+            background-color: $memoryBgColor;
+        }
+        &__element--green {
+            &__title {
+                color: $verbalColor;
+            }
+            background-color: $verbalBgColor;
+        }
+        &__element--blue {
+            &__title {
+                color: $visualColor;
+            }
+            background-color: $visualBgColor;
+        }
+
+        &__link {
+            width: 100%;
+            margin-top: 20px;
+            padding: 10px 10px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 30px;
+            color: white;
+            background-color: $leftBgColor;
+
+            &:hover { background-color: $linkHoverColor; }
+        }
+    }
+}
+
+
+.attribution { font-size: 11px; text-align: center; a { color: hsl(228, 45%, 44%); } }
